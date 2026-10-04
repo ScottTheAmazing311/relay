@@ -61,22 +61,16 @@ Blue is the only large colored surface. Green is status, never decoration.
 Fallbacks: Georgia / system sans.
 
 ## Logo — the rolling chair (adopted 2026-10-04)
-An office task chair riding a hand truck, tilted into motion, with three Signal Amber
-speed lines. It says the whole business in one image: office furniture, in careful
-transit, fast. Chosen by the founder from the concept round in `concepts/` (an evolution
-of concept D, with the chair replacing the box).
+An office task chair riding a hand truck with three speed lines: the whole business in
+one image. The canonical artwork is the owner-supplied raster, `logo-original.png`
+(white background) and `../img/logo.png` (background removed, trimmed, used on the
+site). Earlier in-house vector reconstructions were rejected and removed; when the
+brand goes to print or signage, have this artwork professionally vectorized rather
+than redrawn.
 
-Files in this folder:
-- `logo-mark.svg` — the hand truck and chair alone (slate), for square uses and favicons.
-- `logo-glyph-lines.svg` — mark plus the amber speed lines; the primary glyph.
-- `logo-lockup.svg` — glyph plus "Relay" wordmark (Bitter 700) and "Workplace
-  Logistics". For light grounds.
-- `logo-lockup-dark.svg` — same with light fills, for dark grounds.
-
-Rules: the speed lines are always Signal Amber; the truck and chair take the ink color
-of their ground (slate on light, off-white on dark); never recolor them amber. Clear
-space equals the wheel's diameter. At 20px and below, use the mark without speed lines.
-Lockup text uses SVG `<text>`; convert to outlines before production print or signage.
+Usage: on light grounds, use the transparent PNG directly. On dark grounds, set it on
+a small white chip (the site header does this in dark mode) or use the wordmark alone
+(the site footer does this). The wordmark is "Relay" in Bitter 700.
 
 ## Placeholder content to replace before launch
 - Contact details (`hello@relaymoves.com`, `(800) 555-0144`) and the USDOT number.

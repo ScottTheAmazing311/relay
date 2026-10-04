@@ -56,6 +56,9 @@ header.top{position:sticky; top:env(safe-area-inset-top,0px); z-index:10;
 .top-row{display:flex; align-items:center; gap:22px; padding-block:14px; flex-wrap:wrap}
 .brand{display:flex; align-items:center; gap:9px; text-decoration:none}
 .brand b{font-family:Bitter,Georgia,serif; font-weight:700; font-size:1.3rem}
+.logo-img{display:block; width:46px; height:36px; object-fit:contain}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .logo-img{background:#FFFFFF; border-radius:5px; padding:2px} }
+:root[data-theme="dark"] .logo-img{background:#FFFFFF; border-radius:5px; padding:2px}
 nav{display:flex; gap:20px; flex-wrap:wrap; margin-left:8px}
 nav a{text-decoration:none; font-size:.98rem; color:var(--muted); position:relative}
 nav a::after{content:""; position:absolute; left:0; right:100%; bottom:-4px; height:2px; background:var(--amber);
@@ -80,7 +83,7 @@ nav a:hover::after{right:0}
 .photo-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:26px; align-items:start}
 .photo-grid figure:nth-child(2){translate:0 26px}
 .photo{margin:0; min-width:0}
-.frame{position:relative; overflow:hidden; border-radius:4px; aspect-ratio:4/5; background:var(--blue)}
+.frame{position:relative; overflow:hidden; border-radius:4px; aspect-ratio:4/3; background:var(--blue)}
 .frame.wide{aspect-ratio:3/2}
 .frame img{position:absolute; inset:-9% 0; width:100%; height:118%; object-fit:cover; filter:saturate(.8)}
 .photo figcaption{font-size:.88rem; color:var(--muted); margin-top:10px; max-width:34ch}
@@ -196,29 +199,14 @@ footer .fine{grid-column:1 / -1; border-top:1px solid #3A444D; padding-top:16px;
   form{grid-template-columns:1fr}
   footer .wrap{grid-template-columns:1fr}
   .photo-grid{grid-template-columns:1fr}
-  .photo-grid figure:nth-child(3) .frame{aspect-ratio:4/5}
+  .photo-grid figure:nth-child(3) .frame{aspect-ratio:4/3}
 }
 </style>
 
 <header class="top">
   <div class="wrap top-row">
     <a class="brand" href="#" aria-label="Relay home">
-      <svg viewBox="0 0 110 84" width="47" height="36" aria-hidden="true">
-        <rect x="2" y="30" width="19" height="6" rx="3" fill="#F2A900"/>
-        <rect x="0" y="41" width="24" height="6" rx="3" fill="#F2A900"/>
-        <rect x="3" y="52" width="16" height="6" rx="3" fill="#F2A900"/>
-        <g transform="translate(36,2) rotate(-12 26 66)">
-        <path d="M14 12 H26 Q31 12 31 17 V58 H62" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="34" cy="69" r="6.5" fill="none" stroke="currentColor" stroke-width="5"/>
-        <rect x="38.5" y="4" width="13" height="28" rx="6" fill="currentColor" transform="rotate(7 45 18)"/>
-        <rect x="35.5" y="38" width="28" height="10" rx="5" fill="currentColor"/>
-        <path d="M58.5 38 V30 Q58.5 26 62.5 26 H69" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/>
-        <rect x="47" y="50" width="6" height="5" fill="currentColor"/>
-        <rect x="37.5" y="55" width="25" height="5" rx="2.5" fill="currentColor"/>
-        <circle cx="41.5" cy="63" r="3.9" fill="currentColor"/>
-        <circle cx="58.5" cy="63" r="3.9" fill="currentColor"/>
-        </g>
-      </svg>
+      <img class="logo-img" src="img/logo.png" alt="" width="46" height="36">
       <b>Relay</b>
     </a>
     <nav>
@@ -303,16 +291,16 @@ footer .fine{grid-column:1 / -1; border-top:1px solid #3A444D; padding-top:16px;
 <div class="photos">
   <div class="wrap photo-grid">
     <figure class="photo rv">
-      <div class="frame"><img src="img/crew.jpg" alt="Crew carrying packed boxes to a truck"></div>
-      <figcaption>Crews pack, tag, and carry every workstation before it leaves the floor.</figcaption>
+      <div class="frame"><img src="img/pack.png" alt="Mover carrying boxes through a glass-walled office"></div>
+      <figcaption>Pack-out: every box tagged to a desk and carried by our own crews.</figcaption>
     </figure>
     <figure class="photo rv">
-      <div class="frame"><img src="img/dock.jpg" alt="Palletized load riding a liftgate into a trailer"></div>
-      <figcaption>Dock-out: every asset scanned as it rides onto the truck.</figcaption>
+      <div class="frame"><img src="img/scan.png" alt="Crew member scanning barcoded, labeled boxes"></div>
+      <figcaption>Scanned at every handoff, so the manifest can always say where a thing is.</figcaption>
     </figure>
     <figure class="photo rv">
-      <div class="frame"><img src="img/fleet.jpg" alt="Box truck on the highway"></div>
-      <figcaption>Air-ride transport between addresses, tracked end to end.</figcaption>
+      <div class="frame"><img src="img/install.png" alt="Two crew members unwrapping monitors at a rebuilt workstation"></div>
+      <figcaption>Install: unwrapped, rebuilt, and tested to the space plan before Monday.</figcaption>
     </figure>
   </div>
 </div>
@@ -426,7 +414,7 @@ footer .fine{grid-column:1 / -1; border-top:1px solid #3A444D; padding-top:16px;
 </section>
 
 <div class="promise">
-  <img class="band-img" src="img/facade.webp" alt="" aria-hidden="true">
+  <img class="band-img" src="img/dockout.png" alt="" aria-hidden="true">
   <div class="bg" aria-hidden="true"></div>
   <div class="wrap">
     <p>A move only costs what it takes out of your calendar. Relay schedules every job so
@@ -521,22 +509,6 @@ footer .fine{grid-column:1 / -1; border-top:1px solid #3A444D; padding-top:16px;
   <div class="wrap">
     <div>
       <div class="fbrand">
-        <svg viewBox="0 0 110 84" width="41" height="31" aria-hidden="true">
-          <rect x="2" y="30" width="19" height="6" rx="3" fill="#F2A900"/>
-          <rect x="0" y="41" width="24" height="6" rx="3" fill="#F2A900"/>
-          <rect x="3" y="52" width="16" height="6" rx="3" fill="#F2A900"/>
-          <g transform="translate(36,2) rotate(-12 26 66)">
-          <path d="M14 12 H26 Q31 12 31 17 V58 H62" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="34" cy="69" r="6.5" fill="none" stroke="currentColor" stroke-width="5"/>
-          <rect x="38.5" y="4" width="13" height="28" rx="6" fill="currentColor" transform="rotate(7 45 18)"/>
-          <rect x="35.5" y="38" width="28" height="10" rx="5" fill="currentColor"/>
-          <path d="M58.5 38 V30 Q58.5 26 62.5 26 H69" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/>
-          <rect x="47" y="50" width="6" height="5" fill="currentColor"/>
-          <rect x="37.5" y="55" width="25" height="5" rx="2.5" fill="currentColor"/>
-          <circle cx="41.5" cy="63" r="3.9" fill="currentColor"/>
-          <circle cx="58.5" cy="63" r="3.9" fill="currentColor"/>
-          </g>
-        </svg>
         <b>Relay</b>
       </div>
       <p class="tagline">Out Friday. Open Monday.</p>
@@ -559,9 +531,8 @@ footer .fine{grid-column:1 / -1; border-top:1px solid #3A444D; padding-top:16px;
       </ul>
     </div>
     <div class="fine">Relay Workplace Logistics. Licensed and insured. USDOT 0000000 (placeholder).
-      Phone, email, and registration numbers on this page are placeholders. Photography is
-      demo imagery from open-licensed web templates; replace with licensed brand photography
-      before launch.</div>
+      Phone, email, and registration numbers on this page are placeholders. Logo artwork and photography
+      supplied by the owner; confirm licensing before launch.</div>
   </div>
 </footer>
 
