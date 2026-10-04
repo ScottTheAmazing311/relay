@@ -60,17 +60,23 @@ Blue is the only large colored surface. Green is status, never decoration.
 - No monospace in brand materials; manifests and barcodes are operations, not decoration.
 Fallbacks: Georgia / system sans.
 
-## Logo
-Files in this folder:
-- `logo-lockup.svg` — amber double chevron plus "Relay" wordmark (Bitter 700) and
-  "Workplace Logistics" in small caps-style sans. For light grounds.
-- `logo-lockup-dark.svg` — same for dark grounds (slate footer, vehicle wraps on dark).
-- `logo-mark.svg` — avatar/favicon version: slate square (4px corner), amber chevrons.
+## Logo — the rolling chair (adopted 2026-10-04)
+An office task chair riding a hand truck, tilted into motion, with three Signal Amber
+speed lines. It says the whole business in one image: office furniture, in careful
+transit, fast. Chosen by the founder from the concept round in `concepts/` (an evolution
+of concept D, with the chair replacing the box).
 
-The two chevrons are the handoff, one motion passed to the next. Clear space equals one
-chevron width. Chevrons are always Signal Amber; the wordmark takes the text color of
-its ground. Lockup text uses SVG `<text>`; convert to outlines before production
-print or signage use.
+Files in this folder:
+- `logo-mark.svg` — the hand truck and chair alone (slate), for square uses and favicons.
+- `logo-glyph-lines.svg` — mark plus the amber speed lines; the primary glyph.
+- `logo-lockup.svg` — glyph plus "Relay" wordmark (Bitter 700) and "Workplace
+  Logistics". For light grounds.
+- `logo-lockup-dark.svg` — same with light fills, for dark grounds.
+
+Rules: the speed lines are always Signal Amber; the truck and chair take the ink color
+of their ground (slate on light, off-white on dark); never recolor them amber. Clear
+space equals the wheel's diameter. At 20px and below, use the mark without speed lines.
+Lockup text uses SVG `<text>`; convert to outlines before production print or signage.
 
 ## Placeholder content to replace before launch
 - Contact details (`hello@relaymoves.com`, `(800) 555-0144`) and the USDOT number.
