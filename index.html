@@ -10,26 +10,14 @@
   --rule:#D9DCD8;
   --amber:#F2A900;     /* brand accent: CTAs, highlights */
   --on-amber:#232B32;
-  --blue:#44607A;      /* blanket blue: secondary surface */
-  --blue-deep:#32485C;
-  --blue-soft:#7E95A9;
+  --blue:#2A3036;      /* band slate: dark neutral surface */
+  --blue-deep:#1E2328;
+  --blue-soft:#565E66;
   --on-blue:#F3F6F8;
   --field:#FFFFFF;
   --field-edge:#B9C0C4;
   --ok:#2E7D4F;
   --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.05'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --paper:#151B20; --band:#1C242B; --ink:#E8ECEF; --muted:#9BA7B0; --rule:#333E47;
-    --blue:#3A5166; --blue-deep:#2B3D4E; --blue-soft:#5E788A;
-    --field:#20292F; --field-edge:#4A565F; --ok:#4CAF7A; color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --paper:#151B20; --band:#1C242B; --ink:#E8ECEF; --muted:#9BA7B0; --rule:#333E47;
-  --blue:#3A5166; --blue-deep:#2B3D4E; --blue-soft:#5E788A;
-  --field:#20292F; --field-edge:#4A565F; --ok:#4CAF7A; color-scheme:dark;
 }
 *{box-sizing:border-box}
 body{margin:0; background:var(--paper); background-image:var(--grain); color:var(--ink);
@@ -58,8 +46,6 @@ header.top{position:sticky; top:env(safe-area-inset-top,0px); z-index:10;
 .brand{display:flex; align-items:center; gap:9px; text-decoration:none}
 .brand b{font-family:Bitter,Georgia,serif; font-weight:700; font-size:1.3rem}
 .logo-img{display:block; width:46px; height:36px; object-fit:contain}
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .logo-img{background:#FFFFFF; border-radius:5px; padding:2px} }
-:root[data-theme="dark"] .logo-img{background:#FFFFFF; border-radius:5px; padding:2px}
 nav{display:flex; gap:20px; flex-wrap:wrap; margin-left:8px}
 nav a{text-decoration:none; font-size:.98rem; color:var(--muted); position:relative}
 nav a::after{content:""; position:absolute; left:0; right:100%; bottom:-4px; height:2px; background:var(--amber);

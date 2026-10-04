@@ -45,13 +45,14 @@ professional." No exclamation points, no slogan-fragments as section titles, no
 |---|---|---|
 | Signal Amber | `#F2A900` | Brand accent: logo chevrons, CTAs, highlights. The color of moving trucks and work gloves. |
 | Slate | `#232B32` | Primary text; footer ground. |
-| Blanket Blue | `#44607A` | Secondary surface (the quilted moving-blanket color). Solid bands, illustration fills. |
+| Band Slate | `#2A3036` | Dark neutral surface (promise band; near-neutral, de-blued). |
 | Paper | `#FFFFFF` | Primary ground. |
 | Warm Grey | `#F4F4F1` | Alternating section band. |
 | Clear Green | `#2E7D4F` | Semantic only: confirmations, "on time." |
 
-Rules: light ground is the default; amber appears on white or slate, never floods a page.
-Blue is the only large colored surface. Green is status, never decoration.
+Rules: textured white is the only ground (single light theme; no dark variant). Amber
+appears on white or slate, never floods a page. No blue anywhere: dark surfaces are
+near-neutral slate. Green is status, never decoration.
 
 ## Typography
 - **Headings: Bitter (slab serif), 600/700, sentence case.** Slab serifs are freight and
@@ -68,9 +69,10 @@ site). Earlier in-house vector reconstructions were rejected and removed; when t
 brand goes to print or signage, have this artwork professionally vectorized rather
 than redrawn.
 
-Usage: on light grounds, use the transparent PNG directly. On dark grounds, set it on
-a small white chip (the site header does this in dark mode) or use the wordmark alone
-(the site footer does this). The wordmark is "Relay" in Bitter 700.
+Usage: the site uses `../img/logo.png`, which is the original artwork recolored by
+pixel remap to brand ink (navy -> Dock Slate, orange -> Signal Amber) with the
+background removed; shading and shapes are untouched. On dark grounds set it on a
+small white chip or use the wordmark alone (the footer does). Wordmark: Bitter 700.
 
 ## Placeholder content to replace before launch
 - Contact details (`hello@relaymoves.com`, `(800) 555-0144`) and the USDOT number.
