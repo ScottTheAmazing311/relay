@@ -1,0 +1,199 @@
+<title>Relay Logo Concepts</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout concept: presentation board — one artboard row per concept, judged on light, dark, and favicon scale. */
+:root{
+  --paper:#FFFFFF; --band:#F4F4F1; --ink:#232B32; --muted:#5B6670;
+  --rule:#D9DCD8; --amber:#F2A900; --chip:#232B32; --chip-fg:#E8ECEF;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#151B20; --band:#1C242B; --ink:#E8ECEF; --muted:#9BA7B0; --rule:#333E47; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#151B20; --band:#1C242B; --ink:#E8ECEF; --muted:#9BA7B0; --rule:#333E47; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:'Source Sans 3',system-ui,Helvetica,sans-serif; font-size:17px; line-height:1.55}
+.wrap{max-width:980px; margin:0 auto; padding-inline:22px; padding-block:48px 64px}
+h1,h2{font-family:Bitter,Georgia,serif; margin:0; text-wrap:balance}
+h1{font-size:clamp(1.7rem,4vw,2.3rem)}
+h2{font-size:1.25rem; font-weight:600}
+p{margin:0}
+.intro{color:var(--muted); max-width:62ch; margin-top:12px}
+.current{display:flex; align-items:center; gap:14px; margin-top:28px; padding:14px 16px;
+  border:1px solid var(--rule); border-radius:4px; color:var(--muted); font-size:.95rem; flex-wrap:wrap}
+
+article{margin-top:52px}
+.opt-head{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
+.opt-head .letter{font-family:Bitter,Georgia,serif; font-weight:700; font-size:1.25rem; color:var(--amber)}
+article > p{color:var(--muted); max-width:66ch; margin-top:8px}
+.boards{display:grid; grid-template-columns:1.2fr 1.2fr 1fr; gap:14px; margin-top:18px}
+.ab{border:1px solid var(--rule); border-radius:4px; padding:22px; display:flex;
+  align-items:center; justify-content:center; min-height:170px; background:var(--band);
+  color:#232B32; --gapfill:#F4F4F1}
+.ab.dark{background:var(--chip); color:var(--chip-fg); border-color:var(--chip); --gapfill:#232B32}
+.ab.sizes{flex-direction:column; gap:16px}
+.ab .row{display:flex; align-items:flex-end; gap:18px}
+.ab .cap{font-size:.75rem; color:var(--muted); letter-spacing:.04em}
+.ab.dark .cap{color:#9BA7B0}
+.lockup{display:flex; align-items:center; gap:10px}
+.lockup b{font-family:Bitter,Georgia,serif; font-weight:700; font-size:1.5rem; line-height:1}
+.lockup span{font-size:.62rem; letter-spacing:.14em; color:var(--muted); display:block; margin-top:3px}
+.ab.dark .lockup span{color:#9BA7B0}
+svg{display:block}
+.note{margin-top:56px; padding-top:18px; border-top:1px solid var(--rule); color:var(--muted); font-size:.95rem; max-width:70ch}
+@media (max-width:760px){ .boards{grid-template-columns:1fr 1fr} .ab.sizes{grid-column:1 / -1} }
+@media (max-width:480px){ .boards{grid-template-columns:1fr} }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="m-a" viewBox="0 0 64 64">
+      <rect x="6" y="25" width="38" height="7" fill="currentColor"/>
+      <rect x="10" y="32" width="6" height="15" fill="currentColor"/>
+      <rect x="30" y="32" width="6" height="15" fill="currentColor"/>
+      <polygon points="44,17 60,28.5 44,40" fill="#F2A900"/>
+    </symbol>
+    <symbol id="m-b" viewBox="0 0 64 64">
+      <rect x="10" y="12" width="44" height="40" rx="3" fill="currentColor"/>
+      <rect x="10" y="24" width="44" height="2.5" fill="var(--gapfill,#F4F4F1)"/>
+      <rect x="10" y="37.5" width="44" height="2.5" fill="var(--gapfill,#F4F4F1)"/>
+      <g transform="translate(16,22.4) scale(0.8)">
+        <path d="M0 0 L10 12 L0 24 L7 24 L17 12 L7 0 Z" fill="#F2A900"/>
+        <path d="M14 0 L24 12 L14 24 L21 24 L31 12 L21 0 Z" fill="#F2A900"/>
+      </g>
+    </symbol>
+    <symbol id="m-c" viewBox="0 0 64 64">
+      <path d="M22 56 L22 12 L36 12 C45 12 45 30 36 30 L22 30" fill="none" stroke="currentColor" stroke-width="7"/>
+      <path d="M34 30 L46 56" fill="none" stroke="currentColor" stroke-width="7"/>
+      <rect x="17.5" y="38" width="9" height="9" fill="var(--gapfill,#F4F4F1)"/>
+      <rect x="29" y="18" width="8" height="5" fill="#F2A900"/>
+    </symbol>
+    <symbol id="m-d" viewBox="0 0 64 64">
+      <g transform="rotate(-14 27 54)">
+        <rect x="23" y="8" width="5" height="40" rx="2" fill="currentColor"/>
+        <rect x="23" y="8" width="15" height="5" rx="2" fill="currentColor"/>
+        <rect x="23" y="46" width="25" height="5" rx="1" fill="currentColor"/>
+        <rect x="31" y="27" width="20" height="17" rx="2" fill="#F2A900"/>
+        <g transform="translate(36.5,30.5) scale(0.42)">
+          <path d="M0 0 L10 12 L0 24 L7 24 L17 12 L7 0 Z" fill="#232B32"/>
+          <path d="M14 0 L24 12 L14 24 L21 24 L31 12 L21 0 Z" fill="#232B32"/>
+        </g>
+        <circle cx="27" cy="55" r="6" fill="currentColor"/>
+      </g>
+    </symbol>
+    <symbol id="m-current" viewBox="0 0 34 24">
+      <path d="M0 0 L10 12 L0 24 L7 24 L17 12 L7 0 Z" fill="#F2A900"/>
+      <path d="M14 0 L24 12 L14 24 L21 24 L31 12 L21 0 Z" fill="#F2A900"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <h1>Relay logo concepts</h1>
+  <p class="intro">Four marks that say what Relay does, not just how it moves. Judge each on
+    three things: does it read as office moving, does it hold up on dark, and does it survive
+    16 pixels. All four keep Signal Amber and slate, so any of them drops into the site
+    without touching the rest of the brand.</p>
+
+  <div class="current">
+    <svg width="40" height="28" style="color:var(--ink)"><use href="#m-current"/></svg>
+    For reference: the current mark. Clean, but it says "motion" generically; nothing in it
+    is about offices or moving.
+  </div>
+
+  <article>
+    <div class="opt-head"><span class="letter">A</span><h2>The moving desk</h2></div>
+    <p>A desk in side view, under way. The most literal of the four: the object we move is
+      the mark. The amber arrowhead doubles as the direction of travel and the brand accent.
+      Friendly at large sizes, still legible as "table plus arrow" at favicon scale.</p>
+    <div class="boards">
+      <div class="ab"><svg width="110" height="110" style="color:#232B32"><use href="#m-a"/></svg></div>
+      <div class="ab dark"><svg width="110" height="110" style="color:#E8ECEF"><use href="#m-a"/></svg></div>
+      <div class="ab sizes">
+        <div class="lockup"><svg width="42" height="42" style="color:currentColor"><use href="#m-a"/></svg>
+          <div><b>Relay</b><span>WORKPLACE LOGISTICS</span></div></div>
+        <div class="row">
+          <svg width="28" height="28"><use href="#m-a"/></svg>
+          <svg width="20" height="20"><use href="#m-a"/></svg>
+          <svg width="16" height="16"><use href="#m-a"/></svg>
+        </div>
+        <span class="cap">28 / 20 / 16 px</span>
+      </div>
+    </div>
+  </article>
+
+  <article>
+    <div class="opt-head"><span class="letter">B</span><h2>The stenciled crate</h2></div>
+    <p>A packing crate with board seams, stenciled with the brand chevrons the way real
+      freight is stenciled with handling marks. Keeps the current logo's equity (the chevrons
+      survive as the stencil) and adds the trade. The strongest as an avatar or app icon,
+      since it is already a filled square.</p>
+    <div class="boards">
+      <div class="ab"><svg width="110" height="110" style="color:#232B32"><use href="#m-b"/></svg></div>
+      <div class="ab dark"><svg width="110" height="110" style="color:#3A454F"><use href="#m-b"/></svg></div>
+      <div class="ab sizes">
+        <div class="lockup"><svg width="42" height="42" style="color:currentColor"><use href="#m-b"/></svg>
+          <div><b>Relay</b><span>WORKPLACE LOGISTICS</span></div></div>
+        <div class="row">
+          <svg width="28" height="28"><use href="#m-b"/></svg>
+          <svg width="20" height="20"><use href="#m-b"/></svg>
+          <svg width="16" height="16"><use href="#m-b"/></svg>
+        </div>
+        <span class="cap">28 / 20 / 16 px</span>
+      </div>
+    </div>
+  </article>
+
+  <article>
+    <div class="opt-head"><span class="letter">C</span><h2>The floor-plan R</h2></div>
+    <p>The letter R drawn as an architect's floor plan: thick walls, a door gap in the stem,
+      and one amber desk placed inside the bowl. It encodes the part of the job nobody else
+      advertises, reassembly to the space plan, and it is the most distinctive of the four.
+      The trade-off: the idea lands on second look, not first.</p>
+    <div class="boards">
+      <div class="ab"><svg width="110" height="110" style="color:#232B32"><use href="#m-c"/></svg></div>
+      <div class="ab dark"><svg width="110" height="110" style="color:#E8ECEF"><use href="#m-c"/></svg></div>
+      <div class="ab sizes">
+        <div class="lockup"><svg width="42" height="42" style="color:currentColor"><use href="#m-c"/></svg>
+          <div><b>Relay</b><span>WORKPLACE LOGISTICS</span></div></div>
+        <div class="row">
+          <svg width="28" height="28"><use href="#m-c"/></svg>
+          <svg width="20" height="20"><use href="#m-c"/></svg>
+          <svg width="16" height="16"><use href="#m-c"/></svg>
+        </div>
+        <span class="cap">28 / 20 / 16 px</span>
+      </div>
+    </div>
+  </article>
+
+  <article>
+    <div class="opt-head"><span class="letter">D</span><h2>The hand truck</h2></div>
+    <p>The tool of the trade, tilted into motion, carrying an amber box stenciled with the
+      chevrons. Instantly reads as "movers" from across the street; the warmest and most
+      blue-collar of the four. Needs the most care at tiny sizes, where the wheel and
+      handle start to merge.</p>
+    <div class="boards">
+      <div class="ab"><svg width="110" height="110" style="color:#232B32"><use href="#m-d"/></svg></div>
+      <div class="ab dark"><svg width="110" height="110" style="color:#E8ECEF"><use href="#m-d"/></svg></div>
+      <div class="ab sizes">
+        <div class="lockup"><svg width="42" height="42" style="color:currentColor"><use href="#m-d"/></svg>
+          <div><b>Relay</b><span>WORKPLACE LOGISTICS</span></div></div>
+        <div class="row">
+          <svg width="28" height="28"><use href="#m-d"/></svg>
+          <svg width="20" height="20"><use href="#m-d"/></svg>
+          <svg width="16" height="16"><use href="#m-d"/></svg>
+        </div>
+        <span class="cap">28 / 20 / 16 px</span>
+      </div>
+    </div>
+  </article>
+
+  <p class="note">Pick one and I'll roll it through everything: the site header and footer,
+    the standalone logo files, and the brand book. Mixing is also fair game, for example
+    option B's crate as the avatar with option A's desk in the full lockup. SVG sources
+    live in the repo at brand/concepts/.</p>
+</div>
